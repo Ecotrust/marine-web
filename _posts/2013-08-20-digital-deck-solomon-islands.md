@@ -4,8 +4,8 @@ title: "Digital Deck Solomon Islands"
 description: ""
 category: 
 tags: [Tool development, place]
-lat: -9.4667
-lng: -159.8167
+lat: -8.4667
+lng: 156.8167
 zoom: 6
 ---
 {% include JB/setup %}

@@ -8,8 +8,9 @@ tagline: ocean tools
   <div id="geocarousel" class="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
+      <li data-target="#geocarousel" data-slide-to="0" class="active"></li>
       {% for post in site.tags.place %}
-      <li data-target="#geocarousel" data-slide-to="{{forloop.index}}" {% if forloop.first %}class="active"{%endif%}></li>
+      <li data-target="#geocarousel" data-slide-to="{{forloop.index + 1}}"></li>
       {% endfor %}
     </ol>
     <div class="carousel-inner">
