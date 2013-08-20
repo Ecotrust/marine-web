@@ -27,7 +27,7 @@ tagline: ocean tools
         </div>
       </div>
       {% for post in site.tags.place %}
-      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}">
+      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}">
         <div class="container">
           <div class="carousel-caption lens">
             <div class="lens-panel">
