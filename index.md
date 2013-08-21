@@ -1,6 +1,6 @@
 ---
 layout: page
-title: point97
+title: Point 97
 tagline: ocean tools
 ---
 {% include JB/setup %}

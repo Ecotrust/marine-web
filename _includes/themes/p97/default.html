@@ -46,7 +46,7 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Team</a></li>
           <li class="widget">
-            <a href="#"><span class="climacon cloud" aria-hidden="true" style="color: white;"></span><span class="number">64&deg;</span></a>
+            <a href="#"><span id="climate-icon" class="climacon cloud" aria-hidden="true" style="color: white;"></span><span class="number">64&deg;</span></a>
           </li>
         </ul>
       </div>
@@ -61,10 +61,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-md-8">
           <h2>Cutting edge technology solutions for <span class="blue">marine</span> &amp; coastal communities.</h2>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <h3>Get In Touch</h3>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><strong>Call</strong> {{ site.author.phone }}</p>
@@ -82,46 +82,6 @@
     <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script>
-
-
-      // Create a map
-      // Create a layer
-      // 
-      var map = mapbox.map('map', null, null, []);
-      var center = {lat: 45, lon: -123 };
-      // Add the layer
-      map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
-      map.centerzoom(center,2);
-      map.ease.location(center).zoom(5).optimal();
-      // Attribute
-      map.ui.attribution.add()
-          .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-
-      var $geocarousel = $('#geocarousel').carousel({
-        interval: 8000
-      });
-      $geocarousel.on('slide.bs.carousel', function (e) {
-        var $slide = $(e.relatedTarget);
-        var lat = $slide.data('lat');
-        var lng = $slide.data('lng');
-        var zoom = $slide.data('zoom') || 7;
-        if (lat && lng) {
-          map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
-        } else {
-          map.ease.location(center).zoom(5).optimal();
-        }
-      });
-
-      $("body").keydown(function(e) {
-        if(e.keyCode == 37) { // left
-          $geocarousel.carousel('prev');
-        }
-        else if(e.keyCode == 39) { // right
-          $geocarousel.carousel('next');
-        }
-      });
-
-    </script>
+    <script src="{{ ASSET_PATH }}/js/main.js"></script>
   </body>
 </html>
