@@ -9,11 +9,12 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : point nine seven
-tagline: Site Tagline
+title : Point Nine Seven
+tagline: Cutting edge technology solutions for marine &amp; coastal communities.
 author :
-  name : pointNineSeven
-  email : blah@email.test
+  name : Point Nine Seven
+  email : charles@ecotrust.org
+  phone: 503.467.0785
   github : username
   twitter : username
   feedburner : feedname

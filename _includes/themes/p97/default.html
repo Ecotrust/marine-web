@@ -16,6 +16,7 @@
 
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/font/climacons-font.css" rel="stylesheet" type="text/css" media="all">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
 
@@ -44,21 +45,39 @@
           <li><a href="#">Products</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Team</a></li>
+          <li class="widget">
+            <a href="#"><span class="climacon cloud" aria-hidden="true" style="color: white;"></span><span class="number">64&deg;</span></a>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="container">
-
+    <div class="root">
       <div class="content">
         {{ content }}
       </div>
+    </div>
+      
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>Cutting edge technology solutions for <span class="blue">marine</span> &amp; coastal communities.</h2>
+        </div>
+        <div class="col-lg-4">
+          <h3>Get In Touch</h3>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><strong>Call</strong> {{ site.author.phone }}</p>
+          <p><strong>Email</strong> {{ site.author.email }}</p>
+       </div>
+      </div>
+    <div class="row">
       <!-- <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
         </p>
       </footer> -->
-
     </div>
-
+    </div>
     {% include JB/analytics %}
     <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -87,7 +106,6 @@
         var lat = $slide.data('lat');
         var lng = $slide.data('lng');
         var zoom = $slide.data('zoom') || 7;
-        console.log(zoom);
         if (lat && lng) {
           map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
         } else {

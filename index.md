@@ -5,9 +5,10 @@ tagline: ocean tools
 ---
 {% include JB/setup %}
 <div id="carousel-wrapper">
+  <div id="map"> </div>
   <div id="geocarousel" class="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators" style="display:none">
       <li data-target="#geocarousel" data-slide-to="0" class="active"></li>
       {% for post in site.tags.place %}
       <li data-target="#geocarousel" data-slide-to="{{forloop.index + 1}}"></li>
@@ -19,8 +20,8 @@ tagline: ocean tools
           <div class="carousel-caption lens">
             <div class="lens-panel">
                 <div class="lens-panel-contents">
-                    <h1>point Nine Seven</h1>
-                    <p>Ocean Tools</p>
+                    <h1>Point 97</h1>
+                    <p>Cutting edge technology solutions for marine and coastal communities.</p>
                     <!-- <p><a class="btn btn-large btn-primary" href="#">Read More</a></p> -->
                 </div>
             </div>
@@ -50,5 +51,4 @@ tagline: ocean tools
       <span class="icon-next"></span>
     </a>
   </div>
-  <div id="map"></div>
 </div>
