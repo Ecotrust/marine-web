@@ -2,8 +2,29 @@
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
  -->
-<div class="row-fluid">
-  <div class="span12">
-    {{ content }}
-  </div>
+<div class="row-fluid wide">
+	<div class="span12 wide">
+		<div class="container wide">
+  			<div class="content">
+    			{{ content }}
+  			</div>
+		</div>
+	</div>
 </div>
+
+<div class="container">
+	<div class="span12">
+	    <div class="row-fluid">
+	      <div class="span6">
+	        Heyh
+	      </div>
+	      <div class="span6">
+	        Yo?
+	      </div>
+	    </div>
+	</div>
+</div>
+   <footer>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+      </p>
+    </footer>

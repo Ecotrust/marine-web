@@ -13,8 +13,8 @@ tagline: ocean tools
       <li data-target="#geocarousel" data-slide-to="{{forloop.index + 1}}"></li>
       {% endfor %}
     </ol>
-    <div class="carousel-inner">
-      <div class="item active">
+    <div class="carousel-inner stretch">
+      <div class="item stretch active">
         <div class="container">
           <div class="carousel-caption lens">
             <div class="lens-panel">
@@ -28,7 +28,7 @@ tagline: ocean tools
         </div>
       </div>
       {% for post in site.tags.place %}
-      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}">
+      <div class="item stretch" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}">
         <div class="container">
           <div class="carousel-caption lens">
             <div class="lens-panel">
@@ -50,5 +50,6 @@ tagline: ocean tools
       <span class="icon-next"></span>
     </a>
   </div>
-  <div id="map"></div>
+  <div id="map">
+  </div>
 </div>
