@@ -19,6 +19,11 @@ iframe {
     pointer-events: nonete;
 }
 
+a:link, a:hover {
+    text-decoration: none!important;
+       color: rgb(31, 150,169) !important;
+}
+
 .hidden {
     opacity: 0;
 }
@@ -233,4 +238,8 @@ h1,h2,h3,h4,h5,h6 {
     background: #57A957;
     border: 1px solid #4c964d;
     color: #FFF;
+}
+
+.thumbnail img {
+    min-height: 100px;
 }

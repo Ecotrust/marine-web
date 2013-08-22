@@ -1,6 +1,25 @@
+--- 
+layout: page 
+title: Experience 
+group: navigation 
 ---
-layout: page
-title : Experience
-group: navigation
----
-stuff
+
+{% for post in site.tags.Project %}
+{% assign place = forloop.index |modulo:4 %}
+	{% if place == 1 %}
+	<div class="row">
+	{% endif %}
+    <div class="col-sm-6 col-md-3">
+        <a href="{{ post.url }}">
+            <div class="thumbnail">
+                <img src="http://lorempixel.com/450/450/nature/{{ forloop.index }}">
+                <div class="caption">
+                    <h4>{{ post.title }}</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% if place == 0 %}
+    </div>
+{% endif %}
+{% endfor %}
