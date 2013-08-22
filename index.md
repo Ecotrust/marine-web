@@ -23,7 +23,7 @@ tagline: ocean tools
                     <h1>Point 97</h1>
                     <h2>Portland, Oregon, USA</h2>
                     <div class="lens-content">
-                      <p>Cutting edge technology solutions for marine and coastal communities.</p>
+                      <p>Technology solutions and engagement strategies for marine &amp; coastal planning.</p>
                     </div>
                     <!-- <p><a class="btn btn-default btn-large" href="#">Read More</a></p> -->
                 </div>
@@ -47,7 +47,7 @@ tagline: ocean tools
                       <li>product</li>
                     </ul>
                     {% if post.embed %}
-                    <p><a class="btn btn-default btn-large" href="#">View Data</a></p>
+                    <p><a class="btn btn-default btn-large" data-embed="{{ post.embed| escape }}">View Data</a></p>
                     {% endif %}
                 </div>
             </div>

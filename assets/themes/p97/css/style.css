@@ -11,9 +11,16 @@
 }
 
 
+iframe {
+    background-color: rgb(32,85,57);
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
 
 .hidden {
-    visibility: none;
+    opacity: 0;
 }
 
 html, body {
@@ -100,6 +107,12 @@ h1,h2,h3,h4,h5,h6 {
     height: 100%;
     width: 100%;
 }
+    #carousel-wrapper iframe {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
 	.carousel .lens {
 		top: 25%;
         bottom: auto;
@@ -151,7 +164,7 @@ h1,h2,h3,h4,h5,h6 {
     .lens .btn {
         position: absolute;
         bottom: 10px;
-        right: 10px;
+        right: 25px;
     }
 /* posts index */
  .post > h3.title {
