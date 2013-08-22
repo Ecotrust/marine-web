@@ -22,8 +22,10 @@ tagline: ocean tools
                 <div class="lens-panel-contents">
                     <h1>Point 97</h1>
                     <h2>Portland, Oregon, USA</h2>
-                    <p>Cutting edge technology solutions for marine and coastal communities.</p>
-                    <!-- <p><a class="btn btn-large btn-primary" href="#">Read More</a></p> -->
+                    <div class="lens-content">
+                      <p>Cutting edge technology solutions for marine and coastal communities.</p>
+                    </div>
+                    <!-- <p><a class="btn btn-default btn-large" href="#">Read More</a></p> -->
                 </div>
             </div>
           </div>
@@ -37,8 +39,16 @@ tagline: ocean tools
                 <div class="lens-panel-contents">
                     <h1>{{ post.title }}</h1>
                     <h2>{{ post.place }}</h2>
-                    <p>{{ post.content }}</p>
-                    <!-- <p><a class="btn btn-large btn-primary" href="#">Read More</a></p> -->
+                    <div class="lens-panel-text">
+                      <p>{{ post.content }}</p>
+                    </div>
+                    <ul class="list-unstyled">
+                      <li>partner</li>
+                      <li>product</li>
+                    </ul>
+                    {% if post.embed %}
+                    <p><a class="btn btn-default btn-large" href="#">View Data</a></p>
+                    {% endif %}
                 </div>
             </div>
           </div>

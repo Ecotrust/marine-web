@@ -81,6 +81,14 @@
 
 
   $(document).ready(function () {
+
+
+    $('.widget').popover({
+      placement: 'bottom',
+      content: "test",
+      trigger: "hover"
+    })
+
     $('body').on('swipeleft', function(e) {
       $geocarousel.carousel('prev');
     }).on('swiperight', function(e) {

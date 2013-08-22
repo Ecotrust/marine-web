@@ -11,6 +11,7 @@
 }
 
 
+
 .hidden {
     visibility: none;
 }
@@ -20,6 +21,10 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: 'museo_sans_500regular' !important;
+}
+
+.btn {
     font-family: 'museo_sans_500regular' !important;
 }
 
@@ -44,9 +49,9 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: bold;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 }
-.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:focus {
-    color: white;
-    background-color: inherit;
+.nav>li>a:hover, .nav>li>a:focus, .navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:focus {
+    background-color: inherit !important;
+    
 }
 .navbar .widget {
     margin-top: -8px;
@@ -124,14 +129,30 @@ h1,h2,h3,h4,h5,h6 {
 	.carousel .lens p {
 		text-align: left;
 	}
+    
 	.carousel .lens .lens-panel {
 		width: 35%;
 		height: 100%;
 		background-color: white;
+        position: relative;
 	}
+    .carousel .lens .lens-panel .lens-panel-text {
+        height: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .carousel .lens .lens-panel ul {
+        position: absolute;
+        bottom: 0;
+    }
 		.carousel .lens .lens-panel .lens-panel-contents{
 			padding: 10% 10%;
 		}
+    .lens .btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
 /* posts index */
  .post > h3.title {
     position: relative;
