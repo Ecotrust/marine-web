@@ -1,6 +1,14 @@
 var icons = {
   "clear-day": "climacon sun",
-  "partly-cloudy-day": "climacon cloud sun"
+  "clear-night": "climacon moon",
+  "rain": "climacon downpour",
+  "snow": "climacon snow",
+  "sleet": "climacon sleet",
+  "wind": "climacon wind cloud",
+  "fog": "climacon fog",
+  "cloudy": "climacon cloud",
+  "partly-cloudy-day": "climacon cloud sun",
+  "partly-cloudy-night": "climacon cloud moon"
 }
 
 var weather = {};
@@ -22,6 +30,7 @@ var updateWeather = function (lat, lng) {
       dataType: 'JSONP',
       success: function (result) {
         weather[coords] = result;
+        console.log(result.currently.icon);
         displayWeather(result);
       } 
     })  
@@ -68,3 +77,12 @@ $("body").keydown(function(e) {
 
 
 updateWeather(44, -122);
+
+
+$(document).ready(function () {
+  $('body').on('swipeleft', function(e) {
+    $geocarousel.carousel('prev');
+  }).on('swiperight', function(e) {
+    $geocarousel.carousel('next');
+  });  
+});
