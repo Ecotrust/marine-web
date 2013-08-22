@@ -41,10 +41,9 @@
           <img src="{{ ASSET_PATH }}/images/point_97_logo.svg" alt="point nine seven logo" />
         </a>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Experience</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Team</a></li>
+          {% assign pages_list = site.pages %}
+          {% assign group = 'navigation' %}
+          {% include JB/pages_list %}
           <li class="widget">
             <a href="#">
             <table>

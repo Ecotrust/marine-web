@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: geocarousel
 title: Point 97
 tagline: ocean tools
 ---

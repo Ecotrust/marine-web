@@ -45,8 +45,10 @@
   var $map = $('#map');
   // Add the layer
   map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
-  
-  if ($map.data('lat') && $map.data('lng')) {
+
+  if ($map.hasClass('short-map')) {
+    map.centerzoom(center,3);
+  } else if ($map.data('lat') && $map.data('lng')) {
     center = {lat: $map.data('lat'), lon: $map.data('lng') };
     map.centerzoom(center,5);
     updateWeather($map.data('lat'), $map.data('lng'));
