@@ -16,7 +16,7 @@ iframe {
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
-    pointer-events: none;
+    pointer-events: nonete;
 }
 
 .hidden {
@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar {
-    margin-top: 30px;
+    margin-top: 20px;
     z-index: 1000;
     background-color: inherit !important;
     position: absolute !important;
@@ -46,6 +46,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 170px;
 }
 .navbar .nav {
+    margin-top: 10px;
     float: right;
 }
 .navbar .navbar-nav a{
@@ -73,7 +74,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 .navbar .widget .moon {
     font-size: 34px;
+}
 
+.navbar .weather-window {
+    margin-top: -10px;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
 }
 #carousel-wrapper {
     position: relative;
@@ -103,6 +110,12 @@ h1,h2,h3,h4,h5,h6 {
     top: 0;
     background-color: rgb(32,85,57);
 }
+#map.short-map {
+    height: 115px;
+}
+.post-full {
+    margin-top: 125px;
+}
 #carousel-wrapper .carousel, #carousel-wrapper .carousel .carousel-inner, #carousel-wrapper .carousel .item, #carousel-wrapper .carousel .container {
     height: 100%;
     width: 100%;
@@ -127,7 +140,7 @@ h1,h2,h3,h4,h5,h6 {
 	.carousel .lens  h1 {
 		margin: 0 0;
 		color: black;
-		font-size: 22px;
+		font-size: 20px;
 		text-transform: uppercase;
 		margin-bottom: 5px;
         text-align: left;
@@ -135,7 +148,7 @@ h1,h2,h3,h4,h5,h6 {
     .carousel .lens  h2 {
         margin: 0 0;
         color: black;
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 5%;
         text-align: left;
     }
@@ -150,7 +163,7 @@ h1,h2,h3,h4,h5,h6 {
         position: relative;
 	}
     .carousel .lens .lens-panel .lens-panel-text {
-        height: 120px;
+        height: 250px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -161,7 +174,7 @@ h1,h2,h3,h4,h5,h6 {
 		.carousel .lens .lens-panel .lens-panel-contents{
 			padding: 10% 10%;
 		}
-    .lens .btn {
+    .lens .btn-group {
         position: absolute;
         bottom: 10px;
         right: 25px;

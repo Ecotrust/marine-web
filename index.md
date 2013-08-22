@@ -32,23 +32,26 @@ tagline: ocean tools
         </div>
       </div>
       {% for post in site.tags.place %}
-      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}">
+      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}" data-hash="{{ post.url }}">
         <div class="container">
           <div class="carousel-caption lens">
             <div class="lens-panel">
                 <div class="lens-panel-contents">
+                  <div class="lens-panel-text">
                     <h1>{{ post.title }}</h1>
-                    <h2>{{ post.place }}</h2>
-                    <div class="lens-panel-text">
-                      <p>{{ post.content }}</p>
-                    </div>
-                    <ul class="list-unstyled">
-                      <li>partner</li>
-                      <li>product</li>
-                    </ul>
-                    {% if post.embed %}
-                    <p><a class="btn btn-default btn-large" data-embed="{{ post.embed| escape }}">View Data</a></p>
-                    {% endif %}
+                    <h2>{{ post.place }}</h2>  
+                      <p>{{ post.blurb }}</p>
+                  </div>
+                  <!-- <ul class="list-unstyled">
+                    <li>partner</li>
+                    <li>product</li>
+                  </ul> -->
+                  <div class="btn-group">
+                  {% if post.embed %}
+                    <a class="btn btn-default view-btn" data-embed="{{ post.embed|escape }}">View Data</a>
+                  {% endif %}
+                    <a class="btn btn-default" href="{{ post.url }}">Read More</a>
+                  </div>
                 </div>
             </div>
           </div>

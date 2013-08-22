@@ -46,23 +46,19 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">Team</a></li>
           <li class="widget">
-            <a href="#"><table>
+            <a href="#">
+            <table>
               <tr>
                 <td><span id="climate-icon" class="climacon cloud" aria-hidden="true"></span></td>
                 <td><span class="number">64&deg;</span></td>
               </tr>
             </table></a>
+            <!-- <div class="weather-window">stuff</div> -->
           </li>
         </ul>
       </div>
-    </div>
-    <div class="root">
-      <div class="content">
-        {{ content }}
-      </div>
-    </div>
-      
-
+    </div>  
+    {{ content }}
 
     <div class="container">
       <div class="row">
@@ -87,6 +83,7 @@
     <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
     <script src="{{ ASSET_PATH }}/js/jquery.event.move.js"></script>
     <script src="{{ ASSET_PATH }}/js/jquery.event.swipe.js"></script>
     <script src="{{ ASSET_PATH }}/js/main.js"></script>
