@@ -1,5 +1,6 @@
 ---
 layout: post
+place: California, USA
 title: "Surveying California's Fishing Communities"
 description: ""
 category: 

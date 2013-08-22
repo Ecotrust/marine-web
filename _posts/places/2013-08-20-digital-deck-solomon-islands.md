@@ -1,5 +1,6 @@
 ---
 layout: post
+place: Honiara, Solomon Islands
 title: "Digital Deck Solomon Islands"
 description: ""
 category: 

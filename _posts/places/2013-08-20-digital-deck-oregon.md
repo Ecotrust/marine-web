@@ -1,5 +1,6 @@
 ---
 layout: post
+place: Newport, Oregon, USA
 title: "Digital Deck Oregon"
 description: ""
 category: 

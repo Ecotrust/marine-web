@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Mid Atlantic Data Portal"
+title: "Mid-Atlantic Data Portal"
+place: Mid-Atlantic Region, USA
 description: ""
 category: 
 tags: [Tool development, data collection, advisory services, communications and outreach, place]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Washington Marine Spatial Planning Portal"
+place: Washington State, USA
 description: ""
 category: 
 tags: [place]

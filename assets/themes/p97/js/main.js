@@ -18,7 +18,7 @@
   var displayWeather = function (result) {
     $('.number').html(result.currently.apparentTemperature.toFixed(0) + '&deg;');
     if (icons[result.currently.icon]) {
-      $('#climate-icon').attr('class', icons[result.currently.icon])  
+      $('#climate-icon').attr('class', icons[result.currently.icon]);
     }
   }
 

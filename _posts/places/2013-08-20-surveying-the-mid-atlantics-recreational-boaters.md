@@ -1,5 +1,6 @@
 ---
 layout: post
+place: Mid-Atlantic Region, USA
 title: "Surveying the Mid Atlantic's Recreational Boaters"
 description: ""
 category: 

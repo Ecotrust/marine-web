@@ -1,5 +1,6 @@
 ---
 layout: post
+place: California, USA
 title: "Marine Protected Area Monitoring in California"
 description: ""
 category: 

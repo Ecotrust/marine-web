@@ -11,6 +11,9 @@
 }
 
 
+.hidden {
+    visibility: none;
+}
 
 html, body {
     height: 100%;
@@ -46,22 +49,19 @@ h1,h2,h3,h4,h5,h6 {
     background-color: inherit;
 }
 .navbar .widget {
-    position: relative;
+    margin-top: -8px;
+    
 }
-    .navbar .widget span {
-        position: absolute;
-    }
 .navbar .widget .number {
     font-size: 16px;
-    left: 38px;
-    top: 15px;
-
 }
 
 .navbar .widget .climacon {
     font-size: 32px;
-    left: 10px;
-    top: 8px;
+}
+.navbar .widget .moon {
+    font-size: 34px;
+
 }
 #carousel-wrapper {
     position: relative;
@@ -89,6 +89,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 100%;
     width: 100%;
     top: 0;
+    background-color: rgb(32,85,57);
 }
 #carousel-wrapper .carousel, #carousel-wrapper .carousel .carousel-inner, #carousel-wrapper .carousel .item, #carousel-wrapper .carousel .container {
     height: 100%;
@@ -110,9 +111,16 @@ h1,h2,h3,h4,h5,h6 {
 		color: black;
 		font-size: 22px;
 		text-transform: uppercase;
-		margin-bottom: 5%;
+		margin-bottom: 5px;
         text-align: left;
 	}
+    .carousel .lens  h2 {
+        margin: 0 0;
+        color: black;
+        font-size: 18px;
+        margin-bottom: 5%;
+        text-align: left;
+    }
 	.carousel .lens p {
 		text-align: left;
 	}
@@ -122,7 +130,7 @@ h1,h2,h3,h4,h5,h6 {
 		background-color: white;
 	}
 		.carousel .lens .lens-panel .lens-panel-contents{
-			padding: 20% 10%;
+			padding: 10% 10%;
 		}
 /* posts index */
  .post > h3.title {

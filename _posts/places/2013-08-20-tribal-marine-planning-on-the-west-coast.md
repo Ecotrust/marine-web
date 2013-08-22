@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tribal Marine Planning on the West Coast"
+place: West Coast, USA
 description: ""
 category: 
 tags: [place]
