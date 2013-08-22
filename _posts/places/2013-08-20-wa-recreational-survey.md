@@ -2,7 +2,7 @@
 layout: post
 title: "WA Recreational Survey"
 description: ""
-category: 
+category: Project 
 tags: [Project]
 ---
 {% include JB/setup %}

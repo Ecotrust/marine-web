@@ -3,7 +3,7 @@ layout: post
 place: Honiara, Solomon Islands
 title: "Digital Deck Solomon Islands"
 description: ""
-category: 
+category: Project
 tags: [Tool development, place, Project]
 lat: -8.4667
 lng: 156.8167

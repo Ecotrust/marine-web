@@ -1,3 +1,5 @@
+---
+---
 
 (function () {
   var icons = {
@@ -16,10 +18,14 @@
   var weather = {};
 
   var displayWeather = function (result) {
-    $('.number').html(result.currently.apparentTemperature.toFixed(0) + '&deg;');
-    if (icons[result.currently.icon]) {
-      $('#climate-icon').attr('class', icons[result.currently.icon]);
-    }
+    $('.widget').addClass('fade-out');
+    setTimeout(function () {
+      $('.number').html(result.currently.apparentTemperature.toFixed(0) + '&deg;');
+      if (icons[result.currently.icon]) {
+        $('#climate-icon').attr('class', icons[result.currently.icon]);
+      }
+      $('.widget').removeClass('fade-out');
+    }, 500);
   }
 
   var updateWeather = function (lat, lng) {
@@ -41,7 +47,7 @@
   }
 
   var map = mapbox.map('map', null, null, []);
-  var center = {lat: 45, lon: -124};
+  var center = {lat: 45.5200, lon:  -122.6819};
   var $map = $('#map');
   // Add the layer
   map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
@@ -56,7 +62,9 @@
   } else {
     map.centerzoom(center,2);
     map.ease.location(center).zoom(6).optimal();  
-    updateWeather(44, -122);
+    updateWeather(center.lat, center.lon);
+    var markers = mapbox.markers.layer().url('{{ BASE_PATH }}/data/places.geojson');
+    map.addLayer(markers);
   }
   
   // Attribute
@@ -88,6 +96,7 @@
         updateWeather(lat, lng);
         map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
       } else {
+        updateWeather(center.lat, center.lon);
         map.ease.location(center).zoom(5).optimal();
       }
     });

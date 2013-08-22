@@ -3,7 +3,7 @@ layout: post
 title: "Washington Marine Spatial Planning Portal"
 place: Washington State, USA
 description: ""
-category: 
+category: Project 
 tags: [place, Project]
 lat: 47.1500
 lng: -123.8300

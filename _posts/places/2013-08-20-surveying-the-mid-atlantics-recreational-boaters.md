@@ -3,7 +3,7 @@ layout: post
 place: Mid-Atlantic Region, USA
 title: "Surveying the Mid Atlantic's Recreational Boaters"
 description: ""
-category: 
+category: Project 
 tags: [place, Project]
 lat: 41.6800
 lng: -70.2000

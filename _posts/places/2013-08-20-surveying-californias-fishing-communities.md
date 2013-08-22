@@ -3,7 +3,7 @@ layout: post
 place: California, USA
 title: "Surveying California's Fishing Communities"
 description: ""
-category: 
+category: Project 
 tags: [place, Data collection, advisory services, Project]
 lat: 37.4589
 lng: -122.4369

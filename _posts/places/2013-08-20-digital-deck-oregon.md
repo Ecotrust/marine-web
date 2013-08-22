@@ -3,7 +3,7 @@ layout: post
 place: Newport, Oregon, USA
 title: "Digital Deck Oregon"
 description: ""
-category: 
+category: Project
 tags: [Tool development, place, Project]
 lat: 44.6044
 lng: -124.0547

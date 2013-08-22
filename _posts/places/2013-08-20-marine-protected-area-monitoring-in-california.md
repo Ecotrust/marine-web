@@ -3,7 +3,7 @@ layout: post
 place: California, USA
 title: "Marine Protected Area Monitoring in California"
 description: ""
-category: 
+category: Project
 tags: [place, Project]
 lat: 35.3792
 lng: -120.8533

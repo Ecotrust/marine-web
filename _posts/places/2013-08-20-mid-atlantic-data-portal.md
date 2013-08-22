@@ -3,7 +3,7 @@ layout: post
 title: "Mid-Atlantic Data Portal"
 place: Mid-Atlantic Region, USA
 description: ""
-category: 
+category: Project 
 tags: [Tool development, data collection, advisory services, communications and outreach, place, Project]
 lat: 40.6700
 lng: -74.9400

@@ -3,7 +3,7 @@ layout: post
 title: "Tribal Marine Planning on the West Coast"
 place: West Coast, USA
 description: ""
-category: 
+category: Project 
 tags: [place, Project]
 lat: 40.8664
 lng: -124.0828
