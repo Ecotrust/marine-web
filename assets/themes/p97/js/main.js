@@ -46,12 +46,13 @@
   // Add the layer
   map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
 
-  if ($map.hasClass('short-map')) {
-    map.centerzoom(center,3);
-  } else if ($map.data('lat') && $map.data('lng')) {
+  if ($map.data('lat') && $map.data('lng')) {
     center = {lat: $map.data('lat'), lon: $map.data('lng') };
     map.centerzoom(center,5);
     updateWeather($map.data('lat'), $map.data('lng'));
+  } else if ($map.hasClass('short-map')) {
+    map.centerzoom(center,3);
+    updateWeather(center.lat, center.lon);
   } else {
     map.centerzoom(center,2);
     map.ease.location(center).zoom(6).optimal();  

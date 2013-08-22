@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .navbar .widget {
     margin-top: -8px;
-    
+    width: 65px;
 }
 .navbar .widget .number {
     font-size: 16px;
@@ -111,10 +111,10 @@ h1,h2,h3,h4,h5,h6 {
     background-color: rgb(32,85,57);
 }
 #map.short-map {
-    height: 115px;
+    height: 175px;
 }
 .post-full {
-    margin-top: 125px;
+    margin-top: 200px;
 }
 #carousel-wrapper .carousel, #carousel-wrapper .carousel .carousel-inner, #carousel-wrapper .carousel .item, #carousel-wrapper .carousel .container {
     height: 100%;
