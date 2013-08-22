@@ -1,0 +1,19 @@
+---
+---
+
+{
+    "type": "FeatureCollection",
+    "features": [{% for place in site.tags.place %}{
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [{{ place.lng }},
+                {{ place.lat }}
+            ]
+        },
+        "properties": {
+            "name": "{{ place.title }}"
+        }{% if forloop.index != forloop.length %},{% endif %}
+        {% endfor %}
+    }]
+}
