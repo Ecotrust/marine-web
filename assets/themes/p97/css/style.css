@@ -85,10 +85,43 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar .weather-window {
     margin-top: -10px;
-    padding: 10px;
+    /*padding: 10px;*/
     border: 1px solid rgb(255, 255, 255);
     background: rgb(255, 255, 255);
 }
+.widget .dropdown-toggle {
+    padding-top: 5px;
+}
+
+
+
+.nav .glyphicon {
+    font-size: 16px;
+}
+
+
+.navbar-nav>li>.dropdown-menu {
+    width: 400px;
+    height: 200px;
+    padding: 0;
+}
+
+    .navbar-nav>li>.dropdown-menu .row {
+        margin: 0 0;
+    }
+    .navbar-nav>li>.dropdown-menu .image-box {
+        padding-left: 0;
+        position: relative;
+    }
+    .navbar-nav>li>.dropdown-menu .image-box .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 20px;
+        width: 250px;
+        background-color: rgba(30,30,30, .5);
+        color: whitesmoke;
+    }
 #carousel-wrapper {
     position: relative;
     top: 0;
@@ -245,6 +278,7 @@ h1,h2,h3,h4,h5,h6 {
 .thumbnail img {
     min-height: 100px;
 }
+
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     .navbar {
