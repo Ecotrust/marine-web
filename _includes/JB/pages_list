@@ -40,7 +40,7 @@ Usage:
                   <div class="caption">Stuff</div>
                 </div>
                 <div class="col-xs-4">
-                  stuff
+                  <a href="{{ node.url }}">{{ node.title }}</a>
                 </div>
               </div>
             </li>
