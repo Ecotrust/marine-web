@@ -8,14 +8,14 @@ tagline: ocean tools
   <div id="map"> </div>
   <div id="geocarousel" class="carousel">
     <!-- Indicators -->
-    <ol class="carousel-indicators" style="display:none">
+    <!-- <ol class="carousel-indicators" style="display:none">
       <li data-target="#geocarousel" data-slide-to="0" class="active"></li>
-      {% for post in site.tags.place %}
+      {% for post in site.tags.place reversed %}
       <li data-target="#geocarousel" data-slide-to="{{forloop.index + 1}}"></li>
       {% endfor %}
-    </ol>
+    </ol> -->
     <div class="carousel-inner">
-      {% for post in site.tags.place %}
+      {% for post in site.tags.place reversed %}
       <div class="item{% if forloop.first %} active{% endif %}" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}" data-hash="{{ post.url }}">
         <div class="container">
           <div class="carousel-caption lens">

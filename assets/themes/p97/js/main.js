@@ -61,7 +61,7 @@
     updateWeather(center.lat, center.lon);
   } else {
     map.centerzoom(center,2);
-    map.ease.location(center).zoom(6).optimal();  
+    map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
     updateWeather(center.lat, center.lon);
     var markers = mapbox.markers.layer().url('{{ BASE_PATH }}/data/places.geojson');
     map.addLayer(markers);
