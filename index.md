@@ -15,24 +15,8 @@ tagline: ocean tools
       {% endfor %}
     </ol>
     <div class="carousel-inner">
-      <div class="item active">
-        <div class="container">
-          <div class="carousel-caption lens">
-            <div class="lens-panel">
-                <div class="lens-panel-contents">
-                    <h1>Point 97</h1>
-                    <h2>Portland, Oregon, USA</h2>
-                    <div class="lens-content">
-                      <p>Technology solutions and engagement strategies for marine &amp; coastal planning.</p>
-                    </div>
-                    <!-- <p><a class="btn btn-default btn-large" href="#">Read More</a></p> -->
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {% for post in site.tags.place %}
-      <div class="item" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}" data-hash="{{ post.url }}">
+      <div class="item{% if forloop.first %} active{% endif %}" data-lat="{{ post.lat }}" data-lng="{{ post.lng }}" data-zoom="{{ post.zoom }}" data-hash="{{ post.url }}">
         <div class="container">
           <div class="carousel-caption lens">
             <div class="lens-panel">

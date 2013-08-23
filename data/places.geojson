@@ -7,13 +7,13 @@
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [{{ place.lng }},
+            "coordinates": [
+                {{ place.lng }},
                 {{ place.lat }}
             ]
         },
         "properties": {
             "name": "{{ place.title }}"
-        }{% if forloop.index != forloop.length %},{% endif %}
-        {% endfor %}
-    }]
+        }
+    }{% if forloop.index != forloop.length %},{% endif %}{% endfor %}]
 }
