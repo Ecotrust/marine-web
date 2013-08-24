@@ -34,7 +34,7 @@ tagline: ocean tools
                   {% if post.embed %}
                     <a class="btn btn-default view-btn" data-embed="{{ post.embed|escape }}">View Data</a>
                   {% endif %}
-                    <a class="btn btn-default" href="{{ post.url }}">Read More</a>
+                    <a class="btn btn-default" href="{{BASE_PATH}}{{ post.url }}">Read More</a>
                   </div>
                 </div>
             </div>
