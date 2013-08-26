@@ -349,8 +349,73 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /*iPhone < 5:*/
-@media screen and (device-aspect-ratio: 2/3) {}
+@media screen and (device-aspect-ratio: 2/3) {
+    h2 {
+        font-size: 16px !important;
+        margin-top: 10px !important;
+    }
+    .nav-container {
+        padding-left: 5px !important;
+    }
+    .navbar {
+        margin-top: 5px;
+    }
+    .nav-container .navbar .nav {
+        margin: 0px -40px;
+    }
+    .navbar .navbar-nav a {
+        font-size: 14px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        line-height: 1;
+        text-align: right;
+    }
+    .navbar .widget {
+        display: none !important;
+    }
+    .root {
+        height: 80%;
+    }
+    .root .carousel-inner {
+        
+        padding-top: 20%;
+    }
+    .root .carousel-inner .lens {
+        left: 5%;
+        right: 5%;
+        top: 18%;
+        height: 67%;
+
+    }
+    .root .carousel-inner .carousel-caption h1 {
+        font-size: 14px;
+    }
+    .root .carousel-inner .carousel-caption h2 {
+        font-size: 12px !important;
+    }
+    .root .carousel-inner .lens p, .root .carousel-inner .lens .btn {
+        display: none !important;
+    }
+    .carousel .lens .lens-panel {
+        width: 44%;
+        height: 100%;
+    }
+
+    .carousel .lens .lens-panel .lens-panel-contents {
+        padding: 5% 5%;
+    }
+    .carousel-control {
+        display: none;
+    }
+}
 
 /*iPhone 5:*/
-@media screen and (device-aspect-ratio: 40/71) {}
+@media screen and (device-aspect-ratio: 40/71) {
+    h2 {
+        font-size: 22px;
+    }
+    .root {
+        height: 60%;
+    }
+}
 
