@@ -315,6 +315,25 @@ h1,h2,h3,h4,h5,h6 {
         height: 525px;
     }
 }
+/*  and (orientation:landscape)*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .navbar {
+        width: 92%;
+    }
+  .navbar .navbar-nav {
+      width: 80% !important;
+      margin-top: 10px;
+  }
+  .root {
+      height: 82% !important;
+  }
+  .root .carousel .carousel-caption {
+      right: 7%;
+      left: 7%;
+      height: 450px;
+      top: 20%;
+  }
+}
 
 /*iPhone < 5:*/
 @media screen and (device-aspect-ratio: 2/3) {}
