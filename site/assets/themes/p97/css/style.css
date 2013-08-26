@@ -279,9 +279,46 @@ h1,h2,h3,h4,h5,h6 {
     min-height: 100px;
 }
 
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media (min-width: 1340px) {
     .navbar {
-        width: 90% !important;
+        width: 79% !important;
     }
 }
+
+@media (min-width: 1500px) {
+    .navbar {
+        width: 74% !important;
+    }
+}
+
+
+/* ipad portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .navbar {
+        width: 100%;
+        left: 50px;
+        top: 10px;
+    }
+    .navbar .brand img {
+        height: 100px;
+    }
+    .navbar .navbar-nav {
+        width: 60% !important;
+        margin-top: 0;
+    }
+    .root {
+        height: 75% !important;
+    }
+    .root .carousel .carousel-caption {
+        right: 7%;
+        left: 7%;
+        height: 525px;
+    }
+}
+
+/*iPhone < 5:*/
+@media screen and (device-aspect-ratio: 2/3) {}
+
+/*iPhone 5:*/
+@media screen and (device-aspect-ratio: 40/71) {}
+
