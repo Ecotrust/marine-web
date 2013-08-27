@@ -57,7 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar .navbar-nav a{
     font-family: 'museo_sans_500regular' !important;
 	color: white;
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.6);
@@ -279,30 +279,113 @@ h1,h2,h3,h4,h5,h6 {
     min-height: 100px;
 }
 
-@media (min-width: 1340px) {
-    .container {
-        max-width: 1300px !important;
+@media (max-width: 767px) {
+    .nav-container .navbar .nav li {
+        /*display: inline-block;    You can also add some margins here to make it look prettier 
+            zoom:1;
+            *display:inline; /* this fix is needed for IE7- */*/
     }
-    .navbar {
-        width: 79% !important;
+    .nav-container .navbar-nav {
+        width: 60% !important;
+    }
+}
+
+
+@media (min-width: 768px) { 
+    .navbar .navbar-nav {
+        margin-top: -5px;
+        width: 75%;
+    }
+    .navbar .navbar-nav li a {
+        padding: 5px 3px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .navbar .navbar-nav .widget a {
+        padding-top: 0;
+        margin-top: 15px;
     }
     .navbar .brand img {
-        height: 120px;
+        height: 60px !important;
+    }
+    .root {
+        height: 82%!important;
+    }
+}
+
+
+@media (min-width: 1024px) { 
+    .navbar .navbar-nav li a {
+        padding: 5px 5px;
+        font-size: 18px;
     }
     .navbar .navbar-nav {
-        margin-top: 36px;
+        width: 70%;
     }
-    .navbar .navbar-nav a {
-        font-size: 32px;
+    .navbar .navbar-nav li a {
+        margin-top: 10px;
+        padding-top: 15px;
+        font-size: 18px;
     }
+
+}
+@media (min-width: 1100px) { 
+    .navbar .navbar-nav {
+        width: 60%;
+    }
+}
+@media (min-width: 1200px) { 
+    .navbar .navbar-nav {
+        width: 64%;
+    }
+    .navbar .brand img {
+        height: 80px !important;
+    }
+    .container {
+        max-width: 1100px !important;
+    }
+    .navbar .navbar-nav a{
+        font-size: 24px !important;
+        margin-top: 20px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar .navbar-nav .widget {
+        padding-top: 8px !important;   
+    }
+}
+
+
+@media (min-width: 1300px) {
+    .container {
+        /*max-width: 1200px !important;*/
+    }
+    .navbar .navbar-nav {
+        width: 65%;
+    }
+    .navbar .brand img {
+        height: 100px !important;
+    }
+    
+    .navbar .navbar-nav a{
+        font-size: 26px !important;
+        margin-top: 30px !important;
+     
+    }
+    /*.navbar {
+        width: 72% !important;
+    }*/
 }
 
 @media (min-width: 1500px) {
-    .navbar {
-        width: 74% !important;
+    .container {
+        max-width: 1400px !important;
+    }
+    
+    .navbar .navbar-nav {
+        width:60%;
     }
 }
-
 
 /* ipad portrait */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
@@ -317,6 +400,9 @@ h1,h2,h3,h4,h5,h6 {
     .navbar .navbar-nav {
         width: 60% !important;
         margin-top: 0;
+    }
+    .navbar .navbar-nav a {
+        font-size: 20px !important;
     }
     .root {
         height: 74% !important;
@@ -349,7 +435,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /*iPhone < 5:*/
-@media screen and (device-aspect-ratio: 2/3) {
+@media screen and (device-aspect-ratio: 2/3)  {
     h2 {
         font-size: 16px !important;
         margin-top: 10px !important;
@@ -359,9 +445,15 @@ h1,h2,h3,h4,h5,h6 {
     }
     .navbar {
         margin-top: 5px;
+        width: 100%;
     }
     .nav-container .navbar .nav {
-        margin: 0px -40px;
+        margin: 0px 0px;
+    }
+    .nav-container .navbar .nav li {
+        display: inline-block;   /* You can also add some margins here to make it look prettier */
+            zoom:1;
+            *display:inline; /* this fix is needed for IE7- */
     }
     .navbar .navbar-nav a {
         font-size: 14px;
@@ -406,6 +498,12 @@ h1,h2,h3,h4,h5,h6 {
     }
     .carousel-control {
         display: none;
+    }
+}
+
+@media screen and (device-aspect-ratio: 2/3) and (orientation : landscape) {
+    .nav-container .navbar .nav {
+        width: 50%;
     }
 }
 
