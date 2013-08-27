@@ -405,7 +405,7 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 20px !important;
     }
     .root {
-        height: 74% !important;
+        
     }
     .root .carousel .carousel-caption {
         right: 7%;
@@ -466,7 +466,7 @@ h1,h2,h3,h4,h5,h6 {
         display: none !important;
     }
     .root {
-        height: 80%;
+        /*height: 80%;*/
     }
     .root .carousel-inner {
         
@@ -513,7 +513,7 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 22px;
     }
     .root {
-        height: 60%;
+        /*height: 60%;*/
     }
 }
 
