@@ -28,10 +28,10 @@ iframe {
 .fade-out {
  opacity: 0;   
 }
-html, body {
+/*html, body {
     height: 100%;
 }
-
+*/
 h1,h2,h3,h4,h5,h6 {
     font-family: 'museo_sans_500regular' !important;
 }
@@ -135,7 +135,7 @@ h1,h2,h3,h4,h5,h6 {
     color: rgb(31, 150,169);
 }
 .root {
-    height: 85%;
+    height: 800px;
 }
 .root .content {
     height: 100%;
@@ -309,7 +309,7 @@ h1,h2,h3,h4,h5,h6 {
         height: 60px !important;
     }
     .root {
-        height: 82%!important;
+        height: 700px;
     }
 }
 
