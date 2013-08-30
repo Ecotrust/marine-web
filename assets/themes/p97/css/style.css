@@ -448,7 +448,9 @@ h1,h2,h3,h4,h5,h6 {
     }
     .nav-container .navbar .nav {
         margin: 0px 0px;
+        width: 48% !important;
     }
+    
     .nav-container .navbar .nav li {
         display: inline-block;   /* You can also add some margins here to make it look prettier */
             zoom:1;
@@ -465,7 +467,7 @@ h1,h2,h3,h4,h5,h6 {
         display: none !important;
     }
     .root {
-        /*height: 80%;*/
+        height: 280px;
     }
     .root .carousel-inner {
         
@@ -474,8 +476,8 @@ h1,h2,h3,h4,h5,h6 {
     .root .carousel-inner .lens {
         left: 5%;
         right: 5%;
-        top: 18%;
-        height: 67%;
+        top: 40px;
+        height: 150px !important;
 
     }
     .root .carousel-inner .carousel-caption h1 {
@@ -514,5 +516,18 @@ h1,h2,h3,h4,h5,h6 {
     .root {
         /*height: 60%;*/
     }
+   
+}
+
+/* samsung galaxy */
+@media screen and (device-width: 320px) and (device-height: 640px)
+
+}
+
+/* nexus 4 */
+@media screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)  {
+ .nav-container .navbar .nav {
+     width: 55% !important;
+ }   
 }
 
