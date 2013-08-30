@@ -299,11 +299,10 @@ h1,h2,h3,h4,h5,h6 {
     .navbar .navbar-nav li a {
         padding: 5px 3px;
         font-size: 16px;
-        margin-top: 20px;
     }
     .navbar .navbar-nav .widget a {
         padding-top: 0;
-        margin-top: 15px;
+        /*margin-top: 15px;*/
     }
     .navbar .brand img {
         height: 60px !important;
@@ -390,7 +389,7 @@ h1,h2,h3,h4,h5,h6 {
 /* ipad portrait */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     .navbar {
-        width: 100%;
+        /*width: 100%;*/
         left: 50px;
         top: 10px;
     }
@@ -420,7 +419,7 @@ h1,h2,h3,h4,h5,h6 {
         width: 92%;
     }
   .navbar .navbar-nav {
-      width: 80% !important;
+      width: 57% !important;
       margin-top: 10px;
   }
   .root {
