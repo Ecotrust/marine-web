@@ -503,13 +503,25 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media screen and (device-aspect-ratio: 2/3) and (orientation : landscape) {
+    .navbar {
+        width: 99% !important;
+    }
+    .navbar .brand img {
+        height: 50px;
+    }
+   
     .nav-container .navbar .nav {
-        width: 50%;
+        width: 50% !important;
+    }
+    .navbar .navbar-nav a {
+        font-size: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
 /*iPhone 5:*/
-@media screen and (device-aspect-ratio: 40/71) {
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
     h2 {
         font-size: 22px;
     }
@@ -519,6 +531,34 @@ h1,h2,h3,h4,h5,h6 {
    
 }
 
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .navbar .brand img {
+        height: 40px;
+    }
+    
+    .navbar {
+        width: 100% !important;
+    }
+    .navbar .navbar-nav a {
+        font-size: 10px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .root {
+        height: 170px;
+    }
+    .root .carousel-inner {
+        padding-top: 0px;
+    }
+
+    .root .carousel-inner .lens {
+        left: 5%;
+        right: 5%;
+        top: 60px;
+        height: 100px !important;
+
+    }
+}
 /* samsung galaxy */
 @media screen and (device-width: 320px) and (device-height: 640px)
 
