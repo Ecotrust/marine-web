@@ -502,7 +502,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-@media screen and (device-aspect-ratio: 2/3) and (orientation : landscape) {
+/*@media screen and (device-aspect-ratio: 2/3) and (orientation : landscape) {
     .navbar {
         width: 99% !important;
     }
@@ -518,39 +518,118 @@ h1,h2,h3,h4,h5,h6 {
         padding-left: 5px;
         padding-right: 5px;
     }
-}
+}*/
 
 /*iPhone 5:*/
-@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    h2 {
-        font-size: 22px;
-    }
-    .root {
-        /*height: 60%;*/
-    }
-   
-}
-
-@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .navbar .brand img {
-        height: 40px;
-    }
-    
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait){
     .navbar {
         width: 100% !important;
+        margin-top: 5px !important;
+        margin-left: 5px !important;
+    }
+     .navbar .brand img {
+        height: 40px;
+        margin-top: 4px;
+    }
+    .nav-container .navbar .nav {
+        margin-top: 0px;
+    }
+    .navbar-nav > li > a {
+        padding-top: 0px  !important;
+        padding-bottom: 0px  !important;
+        line-height: 10px  !important;
+    }
+    .nav-container .navbar-nav {
+        width: 70% !important;
     }
     .navbar .navbar-nav a {
         font-size: 10px !important;
         padding-left: 0px;
         padding-right: 0px;
     }
-    .root {
-        height: 170px;
+    .nav-container .navbar .nav li {
+        display: inline-block;   /* You can also add some margins here to make it look prettier */
+            zoom:1;
+            *display:inline; /* this fix is needed for IE7- */
     }
+    .navbar .widget  {
+        display: none !important;
+    }
+    .carousel .carousel-control {
+        display: none!important;
+    }
+    h1 {
+        font-size: 12px !important;
+    }
+    h2 {
+        font-size: 10px !important;
+    }
+
+    .brand-container h2 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .root .carousel-inner .lens {
+        left: 25px;
+        right: 25px;
+        top: 65px;
+        height: 310px !important;
+
+    }
+    .root .carousel-inner .lens { 
+
+    }
+    .carousel .lens .lens-panel {
+        width: 40%;
+    }
+    .carousel .lens .lens-panel .lens-panel-contents {
+    padding: 10px 5px;
+    }
+
+    .lens-panel-text p {
+        font-size: 10px;
+    }
+    .lens .btn {
+        display: none;
+    }
+    .root {
+        height: 400px;
+    }
+   
+}
+
+@media only screen and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .navbar {
+        width: 100% !important;
+        margin-top: 5px !important;
+        margin-left: 5px !important;
+    }
+     .navbar .brand img {
+        height: 40px;
+    }
+    .nav-container .navbar .nav {
+            margin-top: 0px;
+        }
+    /*.nav-container .navbar .navbar-nav {
+        width: 100% !important;
+    }*/
+    .nav-container .navbar .nav li {
+        display: inline-block;   /* You can also add some margins here to make it look prettier */
+            zoom:1;
+            *display:inline; /* this fix is needed for IE7- */
+    }
+    .navbar .navbar-nav a {
+        font-size: 10px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
     .root .carousel-inner {
         padding-top: 0px;
     }
-
+    .root {
+        height: 175px;
+    }
     .root .carousel-inner .lens {
         left: 5%;
         right: 5%;
@@ -558,6 +637,26 @@ h1,h2,h3,h4,h5,h6 {
         height: 100px !important;
 
     }
+    .lens-panel-text p, .lens .btn {
+        display: none;
+    }
+    .navbar .widget  {
+        display: none !important;
+    }
+    .carousel .carousel-control {
+        display: none!important;
+    }
+    h1 {
+        font-size: 12px !important;
+    }
+    h2 {
+        font-size: 10px !important;
+    }
+    .brand-container h2 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
 }
 /* samsung galaxy */
 @media screen and (device-width: 320px) and (device-height: 640px)
