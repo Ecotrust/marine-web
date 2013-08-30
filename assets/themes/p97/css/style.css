@@ -424,12 +424,12 @@ h1,h2,h3,h4,h5,h6 {
       margin-top: 10px;
   }
   .root {
-      height: 400px !important;
+      height: 570px !important;
   }
   .root .carousel .carousel-caption {
       right: 7%;
       left: 7%;
-      height: 450px;
+      height: 425px;
       top: 20%;
   }
 }
