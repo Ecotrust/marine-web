@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
     <![endif]-->
 
-    <script src="{{BASE_PATH}}/marine-web/demo/assets/js/d3.v3.min.js"></script>
-    <script src="{{BASE_PATH}}/marine-web/demo/assets/js/d3.hexbin.v0.js"></script>
-    <script src="{{BASE_PATH}}/marine-web/demo/assets/js/leaflet-src.js"></script>
+    <script src="assets/js/d3.v3.min.js"></script>
+    <script src="assets/js/d3.hexbin.v0.js"></script>
+    <script src="assets/js/leaflet-src.js"></script>
 
-    <script type="text/javascript" src="{{BASE_PATH}}/marine-web/demo/assets/js/colorbrewer.js"></script>
-    <script type="text/javascript" src="{{BASE_PATH}}/marine-web/demo/assets/js/leaflet.hexbin-layer.js"></script>
+    <script type="text/javascript" src="assets/js/colorbrewer.js"></script>
+    <script type="text/javascript" src="assets/js/leaflet.hexbin-layer.js"></script>
 
     <style type="text/css">
       html, body { margin: 0; padding: 0; height: 100%; }
@@ -22,14 +22,14 @@
     </style>
   </head>
   <body>
-    <div id='quake' data-source="{{BASE_PATH}}/marine-web/demo/assets/places/debris.geojson"></div>
+    <div id='quake' data-source="assets/places/debris.geojson"></div>
     <script type="text/javascript">
       (function () {
           var max, scale,
               classes = 9,
               scheme = colorbrewer["YlOrRd"][classes],
               container = L.DomUtil.get('quake'),
-              map = L.map(container).setView([44, -122], 7);
+              map = L.map(container).setView([44, -122], 5);
 
           L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
               attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
