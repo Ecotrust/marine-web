@@ -49,6 +49,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar-default {
     background-color: rgba(0, 0, 0, 0) !important;
     border: 0px !important;
+    position: absolute !important;
 }
     
 }
@@ -299,6 +300,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media only screen and (max-width: 529px) {
+    .root {
+        height: 500px;
+    }
+    .carousel .lens {
+        height: 350px;
+    }
     .carousel-caption {
         left: 10px !important;
         right: 10px !important;

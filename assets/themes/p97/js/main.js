@@ -157,11 +157,20 @@
     //   // trigger: "hover"
     // }).popover('show');
 
-    $('.root').on('swipeleft', function(e) {
-      $geocarousel.carousel('prev');
-    }).on('swiperight', function(e) {
-      $geocarousel.carousel('next');
-    });  
+    // $('.root').on('swipeleft', function(e) {
+    //   $geocarousel.carousel('prev');
+    // }).on('swiperight', function(e) {
+    //   $geocarousel.carousel('next');
+    // });  
+    $('.root').swipe({
+      swipeLeft:function(event, direction, distance, duration, fingerCount) {
+        $geocarousel.carousel('prev');
+      },
+      swipeRight:function(event, direction, distance, duration, fingerCount) {
+        $geocarousel.carousel('prev');
+      },
+      threshold: 25
+    });
   });
 
 })();
