@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar .nav a{
     font-family: 'museo_sans_500regular' !important;
 	color: white !important;
-	/*font-size: 20px;*/
+	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.6);
@@ -104,6 +104,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+
+.navbar-collapse.collapsing, .navbar-collapse.in {
+    background-color: rgba(255,255,255,.7);
+        text-shadow: 0;
+}
+
+.navbar-collapse.collapsing a, .navbar-collapse.in a{
+    color: black !important;
+}
 
 .nav .glyphicon {
     font-size: 16px;
@@ -288,3 +297,26 @@ h1,h2,h3,h4,h5,h6 {
 .thumbnail img {
     min-height: 100px;
 }
+
+@media only screen and (max-width: 529px) {
+    .carousel-caption {
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+}
+
+@media only screen and (min-width: 530px) and (max-width: 699px) {
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 949px) {
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1169px) {
+}
+
+
+@media only screen and (min-width: 1170px) and (max-width: 1189px) {
+}
+

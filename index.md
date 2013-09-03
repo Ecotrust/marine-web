@@ -30,12 +30,13 @@ tagline: ocean tools
                     <li>partner</li>
                     <li>product</li>
                   </ul> -->
-                  <div class="btn-group hidden-phone">
+                 {% comment %} <div class="btn-group hidden-phone">
                   {% if post.embed %}
                     <a class="btn btn-default view-btn" data-embed="{{ post.embed|escape }}">View Data</a>
                   {% endif %}
                     <a class="btn btn-default" href="{{BASE_PATH}}{{ post.url }}">Read More</a>
                   </div>
+                  {% endcomment %}
                 </div>
             </div>
           </div>

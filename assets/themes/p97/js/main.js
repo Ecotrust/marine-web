@@ -157,11 +157,11 @@
     //   // trigger: "hover"
     // }).popover('show');
 
-    // $('body').on('swipeleft', function(e) {
-    //   $geocarousel.carousel('prev');
-    // }).on('swiperight', function(e) {
-    //   $geocarousel.carousel('next');
-    // });  
+    $('.root').on('swipeleft', function(e) {
+      $geocarousel.carousel('prev');
+    }).on('swiperight', function(e) {
+      $geocarousel.carousel('next');
+    });  
   });
 
 })();
