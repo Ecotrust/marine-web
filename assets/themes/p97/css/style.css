@@ -145,7 +145,7 @@ h1,h2,h3,h4,h5,h6 {
     color: rgb(31, 150,169);
 }
 .root {
-    height: 800px;
+    height: 700px;
 }
 .root .content {
     height: 100%;
