@@ -25,6 +25,7 @@ tagline: ocean tools
                     <h1>{{ post.title }}</h1>
                     <h2>{{ post.place }}</h2>  
                       <p>{{ post.blurb }}</p>
+                      <p>{{ post.image }}</p>
                   </div>
                   <!-- <ul class="list-unstyled">
                     <li>partner</li>

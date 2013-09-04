@@ -45,34 +45,36 @@
     
     
   }
-
-  var map = mapbox.map('map', null, null, []);
-  var center = {lat: 45.5200, lon:  -122.6819};
   var $map = $('#map');
-  // Add the layer
-  map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
+  if ($map.length) {
+    var map = mapbox.map($map[0], null, null, []);
+    var center = {lat: 45.5200, lon:  -122.6819};
+    
+    // Add the layer
+    map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
 
-  if ($map.data('lat') && $map.data('lng')) {
-    center = {lat: $map.data('lat'), lon: $map.data('lng') };
-    map.centerzoom(center,5);
-    updateWeather($map.data('lat'), $map.data('lng'));
-  } else if ($map.hasClass('short-map')) {
-    map.centerzoom(center,3);
-    updateWeather(center.lat, center.lon);
-  } else {
-    map.centerzoom(center,2);
-    map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
-    updateWeather(center.lat, center.lon);
-    var markers = mapbox.markers.layer().url('data/places.geojson');
-    map.addLayer(markers);
+    if ($map.data('lat') && $map.data('lng')) {
+      center = {lat: $map.data('lat'), lon: $map.data('lng') };
+      map.centerzoom(center,5);
+      updateWeather($map.data('lat'), $map.data('lng'));
+    } else if ($map.hasClass('short-map')) {
+      map.centerzoom(center,3);
+      updateWeather(center.lat, center.lon);
+    } else if ($map.length) {
+      map.centerzoom(center,2);
+      map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
+      updateWeather(center.lat, center.lon);
+      var markers = mapbox.markers.layer().url('data/places.geojson');
+      map.addLayer(markers);
+    }
+    
+    // Attribute
+    map.ui.attribution.add()
+        .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+  
   }
   
-  // Attribute
-  map.ui.attribution.add()
-      .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-
   var $geocarousel = $('#geocarousel');
-
   if ($geocarousel.length) {
     $geocarousel.carousel({
       interval: 10000
@@ -83,7 +85,6 @@
       var lat = $slide.data('lat');
       var lng = $slide.data('lng');
       var zoom = $slide.data('zoom') || 7;
-      
       if ($slide.data('hash')) {
         window.location.hash = $slide.data('hash');
       } else {
@@ -92,10 +93,10 @@
 
       $('iframe').remove();
       $('.active-data').text("View Data");
-      if (lat && lng) {
+      if ($map.length && lat && lng) {
         updateWeather(lat, lng);
         map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
-      } else {
+      } else if ($map.length) {
         updateWeather(center.lat, center.lon);
         map.ease.location(center).zoom(5).optimal();
       }
@@ -117,8 +118,13 @@
     if (window.location.hash) {
       $slide = $('.item[data-hash="' + window.location.hash.replace('#', '') + '"]');
       $geocarousel.carousel($slide.index());
+    } else {
+      $slide = $('.item.active');
     }
 
+    //if ($slide.data('image')) {
+    //  $('root').backstretch('/assets/themes/p97/images/portraits/team.jpg');
+    //}
 
     $('.lens').on('click', '.view-btn', function (e) {
       var $button = $(e.target).closest('.btn');
