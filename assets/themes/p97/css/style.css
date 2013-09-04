@@ -344,8 +344,8 @@ h1,h2,h3,h4,h5,h6 {
 
 @media only screen and (min-width: 1170px) {
     .carousel-caption {
-        left: 10% !important;
-        right: 10% !important;
+        left: 20% !important;
+        right: 20% !important;
     }
 }
 
