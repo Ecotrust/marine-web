@@ -223,7 +223,7 @@ h1,h2,h3,h4,h5,h6 {
         position: relative;
 	}
     .carousel .lens .lens-panel .lens-panel-text {
-        height: 250px;
+        height: 300px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -301,10 +301,16 @@ h1,h2,h3,h4,h5,h6 {
 
 @media only screen and (max-width: 529px) {
     .root {
-        height: 500px;
+        height: 600px;
     }
     .carousel .lens {
-        height: 300px;
+        height: 400px;
+    }
+    .carousel .lens .lens-panel .lens-panel-text {
+        height: 350px;
+    }
+    .carousel .lens .lens-panel {
+        width: 45%;
     }
     .carousel-caption {
         left: 10px !important;
@@ -314,16 +320,32 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media only screen and (min-width: 530px) and (max-width: 699px) {
-
+    .carousel-caption {
+        left: 5% !important;
+        right: 5% !important;
+    }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 949px) {
+
+    .carousel-caption {
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 
 @media only screen and (min-width: 950px) and (max-width: 1169px) {
+    .carousel-caption {
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 
 
-@media only screen and (min-width: 1170px) and (max-width: 1189px) {
+@media only screen and (min-width: 1170px) {
+    .carousel-caption {
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 

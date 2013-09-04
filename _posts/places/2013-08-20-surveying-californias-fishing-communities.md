@@ -1,12 +1,13 @@
 ---
 layout: post
 place: California, USA
-title: "Surveying California's Fishing Communities"
+title: "Visualizing Fishing Effort"
 description: ""
 category: Project 
 tags: [place, Data collection, advisory services, Project]
 lat: 37.4589
 lng: -122.4369
-blurb: As part of the Marine Life Protection Act process, we conducted 1,812 interviews with commercial, charter, and recreational fishermen to illustrate spatial use patterns of major coastal fisheries in California. Fishing communities collaborated in developing, refining, and validating final maps to inform the design of marine protected areas.
+stat: 1,812
+blurb: To inform the design of marine protected areas, we collaborated with commercial, charter, and recreational fishermen to illustrate use patterns of coastal fisheries in California.
 ---
 {% include JB/setup %}

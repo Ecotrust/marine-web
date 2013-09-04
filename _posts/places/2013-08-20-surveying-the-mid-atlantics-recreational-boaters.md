@@ -1,12 +1,12 @@
 ---
 layout: post
 place: Mid-Atlantic Region, USA
-title: "Surveying the Mid Atlantic's Recreational Boaters"
+title: "Surveying Recreational Boaters"
 description: ""
 category: Project 
 tags: [place, Project]
-lat: 41.6800
-lng: -70.2000
-blurb: Ocean planning is underway in the Mid-Atlantic. To ensure the most up to date information is available to regional planners, we designed a survey tool that allows boaters to input important trip information. This information will provide a better understanding of where recreational boaters use the ocean and ensure that these areas are incorporated into the planning process.
+lat: 41.0383
+lng: -71.9506
+blurb: We designed an online survey tool that allows boaters to input important trip information to provide a better understanding of where recreational boaters use the ocean.
 ---
 {% include JB/setup %}

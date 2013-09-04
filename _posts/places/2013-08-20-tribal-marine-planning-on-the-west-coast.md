@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Tribal Marine Planning on the West Coast"
+title: "Tribal Marine Planning"
 place: West Coast, USA
 description: ""
 category: Project 
 tags: [place, Project]
 lat: 40.8664
 lng: -124.0828
-blurb: In response to a tribal desire to be more active ocean governance, we are working with West Coast Tribes to establish a partnership that will advance individual tribal marine planning for traditional territories.
+blurb: We are working with West Coast tribes to establish a partnership that will advance individual tribal marine planning goals for traditional territories.
 ---
 {% include JB/setup %}
