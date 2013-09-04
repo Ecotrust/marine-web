@@ -304,10 +304,11 @@ h1,h2,h3,h4,h5,h6 {
         height: 450px;
     }
     .carousel .lens {
-        height: 300px;
+        height: 320px;
+        top: 115px !important;
     }
     .carousel .lens .lens-panel .lens-panel-text {
-        height: 275px;
+        height: 295px;
     }
     .carousel .lens .lens-panel {
         width: 58% !important;

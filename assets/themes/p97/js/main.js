@@ -75,7 +75,7 @@
 
   if ($geocarousel.length) {
     $geocarousel.carousel({
-      interval: 30000
+      interval: 10000
     });
 
     $geocarousel.on('slide.bs.carousel', function (e) {
