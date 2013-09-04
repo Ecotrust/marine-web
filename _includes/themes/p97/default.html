@@ -51,32 +51,74 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-          {% comment %}{% assign pages_list = site.pages %}
-          {% assign group = 'navigation' %}
-          {% include JB/pages_list %}{% endcomment %}
-                  <li class="dropdown active"><a href="{{BASE_PATH}}/team">Team</i></a></li>
-          <li class="widget faded fade-out hidden-phone">
-            <a class="dropdown-toggle" data-toggle="dropdown"><table>
-              <tr>
-                <td><span id="climate-icon" class="climacon" aria-hidden="true"></span></td>
-                <td><span class="number"></span></td>
-              </tr>
-            </table></a> 
-            <ul class="dropdown-menu pull-right">
-            <li class="dropdown">
-              <div class="row-fluid">
-                <div class="col-xs-8 image-box">
-                    <img src="http://lorempixel.com/g/250/200/nature/">
-                  <div class="caption">Stuff</div>
-                </div>
-                <div class="col-xs-4">
-                  Weather!
-                </div>
-              </div>
+            {% if page.url == '/index.html' %}
+            <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                Experience
+                <i class="glyphicon glyphicon-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li class="dropdown">
+                  <div class="row-fluid">
+                    <div class="col-xs-8 image-box">
+                        <img src="http://lorempixel.com/g/250/200/nature/">
+                      <div class="caption">Stuff</div>
+                    </div>
+                    <div class="col-xs-4">
+                      Weather!
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </li>
-          </ul>
-            <!-- <div class="weather-window">stuff</div> -->
-          </li>
+            {% else %}
+            <li><a href="{{ BASE_PATH }}/index.html">Experience</a></li>
+            {% endif %}
+            {% if page.url == '/team/index.html' %}
+              <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                  Team
+                  <i class="glyphicon glyphicon-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu pull-right">
+                  <li class="dropdown">
+                    <div class="row-fluid">
+                      <div class="col-xs-8 image-box">
+                          <img src="http://lorempixel.com/g/250/200/nature/">
+                        <div class="caption">Stuff</div>
+                      </div>
+                      <div class="col-xs-4">
+                        Weather!
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              {% else %}
+              <li><a href="{{ BASE_PATH }}/team/index.html">Team</a></li>
+              {% endif %}
+            <li class="widget faded fade-out hidden-phone">
+              <a class="dropdown-toggle" data-toggle="dropdown"><table>
+                <tr>
+                  <td><span id="climate-icon" class="climacon" aria-hidden="true"></span></td>
+                  <td><span class="number"></span></td>
+                </tr>
+              </table></a> 
+              <ul class="dropdown-menu pull-right">
+                <li class="dropdown">
+                  <div class="row-fluid">
+                    <div class="col-xs-8 image-box">
+                        <img src="http://lorempixel.com/g/250/200/nature/">
+                      <div class="caption">Stuff</div>
+                    </div>
+                    <div class="col-xs-4">
+                      Weather!
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- <div class="weather-window">stuff</div> -->
+            </li>
         </ul>
         </div><!--/.nav-collapse -->
       </div>
