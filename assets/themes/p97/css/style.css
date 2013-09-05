@@ -160,9 +160,12 @@ h1,h2,h3,h4,h5,h6 {
     height: 100%;
     
 }
-.item img.stretch {
+img.stretch {
     width: 100%;
     margin: 0 auto;
+}
+.thumbnail img {
+    width: 100% !important;
 }
 .blue {
     color: rgb(31, 150,169);
@@ -186,6 +189,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 #map.short-map {
     height: 175px;
+}
+
+.simplestyle-marker {
+    z-index: 500!important;
 }
 .post-full {
     /*margin-top: 200px;*/

@@ -7,5 +7,6 @@ category:
 tags: [place]
 lat: 18.3333
 lng: -64.7333
+zoom: 5
 ---
 {% include JB/setup %}
