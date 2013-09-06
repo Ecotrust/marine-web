@@ -13,7 +13,8 @@
             ]
         },
         "properties": {
-            "name": "{{ place.title }}"
+            "name": "{{ place.title }}",
+             "marker-color": "#fff"
         }
     }{% if forloop.index != forloop.length %},{% endif %}{% endfor %}]
 }
