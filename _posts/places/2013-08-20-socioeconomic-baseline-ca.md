@@ -1,7 +1,7 @@
 ---
 layout: post
 place: California, USA
-title: "A socioeconomic Baseline"
+title: "A socio-economic Baseline"
 description: ""
 category: Project
 tags: [place, Project]

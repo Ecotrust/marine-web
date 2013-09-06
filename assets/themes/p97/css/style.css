@@ -13,7 +13,6 @@
 
 iframe {
     background-color: rgb(32,85,57);
-    pointer-events: nonete;
 }
 
 
@@ -21,8 +20,15 @@ iframe {
     margin-bottom: 20px;
 }
 
-.team .carousel-control {
-    display: none;
+
+.thumbnail {
+    border: 0 !important;
+    padding: 10px 0;
+}
+
+.thumbnail .caption h3 {
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .container.container-wide { width: 100%;}
@@ -44,6 +50,17 @@ iframe {
 */
 h1,h2,h3,h4,h5,h6 {
     font-family: 'museo_sans_500regular' !important;
+}
+
+p {
+    font-family:Georgia, serif;
+    -ms-word-break: break-all;
+         word-break: break-all;
+         word-break: break-word;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
 }
 
 .btn {

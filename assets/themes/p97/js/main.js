@@ -85,11 +85,11 @@
       var lat = $slide.data('lat');
       var lng = $slide.data('lng');
       var zoom = $slide.data('zoom') || 7;
-      if ($slide.data('hash')) {
-        window.location.hash = $slide.data('hash');
-      } else {
-        window.location.hash = "";
-      }
+      // if ($slide.data('hash')) {
+      //   window.location.hash = $slide.data('hash');
+      // } else {
+      //   window.location.hash = "";
+      // }
 
       $('iframe').remove();
       $('.active-data').text("View Data");
@@ -115,12 +115,12 @@
   $(document).ready(function () {
     var $slide;
 
-    if (window.location.hash) {
-      $slide = $('.item[data-hash="' + window.location.hash.replace('#', '') + '"]');
-      $geocarousel.carousel($slide.index());
-    } else {
-      $slide = $('.item.active');
-    }
+    // if (window.location.hash) {
+    //   $slide = $('.item[data-hash="' + window.location.hash.replace('#', '') + '"]');
+    //   $geocarousel.carousel($slide.index());
+    // } else {
+    //   $slide = $('.item.active');
+    // }
 
     //if ($slide.data('image')) {
     //  $('root').backstretch('/assets/themes/p97/images/portraits/team.jpg');
