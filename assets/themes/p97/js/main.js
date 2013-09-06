@@ -45,72 +45,6 @@
     
     
   }
-  var $map = $('#map');
-  if ($map.length) {
-    var map = mapbox.map($map[0], null, null, []);
-    var center = {lat: 45.5200, lon:  -122.6819};
-    
-    // Add the layer
-    map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
-
-    if ($map.data('lat') && $map.data('lng')) {
-      center = {lat: $map.data('lat'), lon: $map.data('lng') };
-      map.centerzoom(center,5);
-      updateWeather($map.data('lat'), $map.data('lng'));
-    } else if ($map.hasClass('short-map')) {
-      map.centerzoom(center,3);
-      updateWeather(center.lat, center.lon);
-    } else if ($map.length) {
-      map.centerzoom(center,2);
-      map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
-      updateWeather(center.lat, center.lon);
-      var markers = mapbox.markers.layer().url('data/places.geojson');
-      map.addLayer(markers);
-    }
-    
-    // Attribute
-    map.ui.attribution.add()
-        .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-  
-  }
-  
-  var $geocarousel = $('#geocarousel');
-  if ($geocarousel.length) {
-    $geocarousel.carousel({
-      interval: 10000
-    });
-
-    $geocarousel.on('slide.bs.carousel', function (e) {
-      var $slide = $(e.relatedTarget);
-      var lat = $slide.data('lat');
-      var lng = $slide.data('lng');
-      var zoom = $slide.data('zoom') || 7;
-      // if ($slide.data('hash')) {
-      //   window.location.hash = $slide.data('hash');
-      // } else {
-      //   window.location.hash = "";
-      // }
-
-      $('iframe').remove();
-      $('.active-data').text("View Data");
-      if ($map.length && lat && lng) {
-        updateWeather(lat, lng);
-        map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
-      } else if ($map.length) {
-        updateWeather(center.lat, center.lon);
-        map.ease.location(center).zoom(5).optimal();
-      }
-    });
-
-    $("body").keydown(function(e) {
-      if(e.keyCode == 37) { // left
-        $geocarousel.carousel('prev');
-      }
-      else if(e.keyCode == 39) { // right
-        $geocarousel.carousel('next');
-      }
-    });
-  }
 
   $(document).ready(function () {
     var $slide;
@@ -125,6 +59,74 @@
     //if ($slide.data('image')) {
     //  $('root').backstretch('/assets/themes/p97/images/portraits/team.jpg');
     //}
+
+    var $map = $('#map');
+    if ($map.length) {
+      var map = mapbox.map($map[0], null, null, []);
+      var center = {lat: 45.5200, lon:  -122.6819};
+      
+      // Add the layer
+      map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
+
+      if ($map.data('lat') && $map.data('lng')) {
+        center = {lat: $map.data('lat'), lon: $map.data('lng') };
+        map.centerzoom(center,5);
+        updateWeather($map.data('lat'), $map.data('lng'));
+      } else if ($map.hasClass('short-map')) {
+        map.centerzoom(center,3);
+        updateWeather(center.lat, center.lon);
+      } else if ($map.length) {
+        map.centerzoom(center,2);
+        map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
+        updateWeather(center.lat, center.lon);
+        var markers = mapbox.markers.layer().url('data/places.geojson');
+        map.addLayer(markers);
+      }
+      
+      // Attribute
+      map.ui.attribution.add()
+          .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
+    
+    }
+    
+    var $geocarousel = $('#geocarousel');
+    if ($geocarousel.length) {
+      $geocarousel.carousel({
+        interval: 10000
+      });
+
+      $geocarousel.on('slide.bs.carousel', function (e) {
+        var $slide = $(e.relatedTarget);
+        var lat = $slide.data('lat');
+        var lng = $slide.data('lng');
+        var zoom = $slide.data('zoom') || 7;
+        // if ($slide.data('hash')) {
+        //   window.location.hash = $slide.data('hash');
+        // } else {
+        //   window.location.hash = "";
+        // }
+
+        $('iframe').remove();
+        $('.active-data').text("View Data");
+        if ($map.length && lat && lng) {
+          updateWeather(lat, lng);
+          map.ease.location({ lat: lat, lon: lng - 1 }).zoom(zoom).optimal();
+        } else if ($map.length) {
+          updateWeather(center.lat, center.lon);
+          map.ease.location(center).zoom(5).optimal();
+        }
+      });
+
+      $("body").keydown(function(e) {
+        if(e.keyCode == 37) { // left
+          $geocarousel.carousel('prev');
+        }
+        else if(e.keyCode == 39) { // right
+          $geocarousel.carousel('next');
+        }
+      });
+    }
+
 
     $('.lens').on('click', '.view-btn', function (e) {
       var $button = $(e.target).closest('.btn');

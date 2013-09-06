@@ -26,6 +26,13 @@ tagline: ocean tools
                     <h2>{{ post.place }}</h2>  
                       <p>{{ post.blurb }}</p>
                       <p>{{ post.image }}</p>
+                      <div class="product-icon">
+                      {% case post.product %}
+                      {% when 'digital-deck' %}
+                      <img src="{{ ASSET_PATH }}/images/logos/DigitalDeckLOGO.svg"/>
+                      {% else %}
+                      {% endcase %}
+                      </div>
                   </div>
                   <!-- <ul class="list-unstyled">
                     <li>partner</li>
