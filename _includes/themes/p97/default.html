@@ -36,7 +36,7 @@
     <script type="text/javascript" src="{{ ASSET_PATH }}/js/modernizr.min.js"></script>
   </head>
 
-  <body>
+  <body class="{% if page.light %}light{% endif %} {% if page.transparent %}transparent{% endif %}">
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -45,7 +45,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}"><img src="{{ ASSET_PATH }}/images/point_97_logo.svg" alt="point nine seven logo" /></a>
+          <a class="navbar-brand" href="{{ HOME_PATH }}">
+            {% if page.light %}
+            <img src="{{ ASSET_PATH }}/images/point_97_logo.svg" alt="point nine seven logo" />
+            {% else %}
+            <img src="{{ ASSET_PATH }}/images/point_97_logo_dark.svg" alt="point nine seven logo" />
+            {% endif %}
+          </a>
           <!-- <a class="navbar-brand" href="{{ HOME_PATH }}"><img src="{{ ASSET_PATH }}/images/p97_blue.png" alt="point nine seven logo" /></a> -->
         </div>
         <div class="navbar-collapse collapse">
@@ -53,52 +59,10 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            {% if page.url == '/!!index.html' %}
-            <li class="dropdown active">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                Experience
-                <i class="glyphicon glyphicon-chevron-down"></i>
-              </a>
-              <ul class="dropdown-menu pull-right">
-                <li class="dropdown">
-                  <div class="row-fluid">
-                    <div class="col-xs-8 image-box">
-                        <img src="http://lorempixel.com/g/250/200/nature/">
-                      <div class="caption">Stuff</div>
-                    </div>
-                    <div class="col-xs-4">
-                      Weather!
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            {% else %}
-            <li><a href="{{ BASE_PATH }}/index.html">Experience</a></li>
-            {% endif %}
-            {% if page.url == '!!/team/index.html' %}
-              <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                  Team
-                  <i class="glyphicon glyphicon-chevron-down"></i>
-                </a>
-                <ul class="dropdown-menu pull-right">
-                  <li class="dropdown">
-                    <div class="row-fluid">
-                      <div class="col-xs-8 image-box">
-                          <img src="http://lorempixel.com/g/250/200/nature/">
-                        <div class="caption">Stuff</div>
-                      </div>
-                      <div class="col-xs-4">
-                        Weather!
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              {% else %}
-              <li><a href="{{ BASE_PATH }}/team/index.html">Team</a></li>
-              {% endif %}
+            <li {% if page.url == '/about/index.html' %}class="active"{% endif %}><a href="{{ BASE_PATH }}/about/index.html">About</a></li>
+            <!-- <li {% if page.url == '/index.html' %}class="active"{% endif %}><a href="{{ BASE_PATH }}/index.html">Experience</a></li> -->
+              <li {% if page.url == '/services/index.html' %}class="active"{% endif %}><a href="{{ BASE_PATH }}/services/index.html">Services</a></li>
+              <li {% if page.url == '/team/index.html' %}class="active"{% endif %}><a href="{{ BASE_PATH }}/team/index.html">Team</a></li>
             <li class="widget faded fade-out hidden-phone">
               <a class="dropdown-toggle"><table>
                 <tr>
@@ -106,7 +70,6 @@
                   <td><span class="number"></span></td>
                 </tr>
               </table></a> 
-              
               <!-- <div class="weather-window">stuff</div> -->
             </li>
         </ul>
@@ -119,11 +82,11 @@
 
     <div class="container brand-container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-8 col-md-8">
           <h2>Technology solutions and engagement strategies for <span class="blue">marine</span> &amp; coastal planning.</h2>
           <img src="{{ ASSET_PATH }}/images/ecotrust.png" alt="point 97, an ecotrust company"/>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-4 col-md-4">
           <h3>Get In Touch</h3>
           <p><strong>Call</strong> {{ site.author.phone }}</p>
           <p><strong>Email</strong> <a href="mailto:{{site.author.email}}">{{ site.author.email }}</a></p>

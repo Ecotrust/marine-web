@@ -2,6 +2,8 @@
 layout: geocarousel
 title: Point 97
 tagline: ocean tools
+light: true
+transparent: true
 ---
 {% include JB/setup %}
 <div id="carousel-wrapper">
@@ -52,10 +54,10 @@ tagline: ocean tools
       </div>
       {% endfor %}
     </div>
-    <a class="left carousel-control" href="#geocarousel" data-slide="prev">
+    <a class="left carousel-control hidden-xs" href="#geocarousel" data-slide="prev">
       <i class="icon-chevron-left"> </i>
     </a>
-    <a class="right carousel-control" href="#geocarousel" data-slide="next">
+    <a class="right carousel-control hidden-xs" href="#geocarousel" data-slide="next">
       <i class="icon-chevron-right"> </i>
     </a>
   </div>

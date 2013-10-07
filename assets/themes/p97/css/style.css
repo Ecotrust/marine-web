@@ -59,12 +59,12 @@ h1,h2,h3,h4,h5,h6 {
 p {
     font-family:Georgia, serif !important;
     -ms-word-break: break-all;
-         
          word-break: break-word;
-
     -webkit-hyphens: auto;
-       /*-moz-hyphens: auto;*/
             hyphens: auto;
+}
+.page-content {
+    margin-top: 140px;
 }
 
 .btn {
@@ -78,9 +78,18 @@ p {
 }
 
 .navbar-default {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: white !important;
     border: 0px !important;
     position: absolute !important;
+}
+
+.transparent .navbar-default {
+    background-color: rgba(0,0,0,0) !important;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=0);
 }
 
 .navbar .brand {
@@ -93,17 +102,27 @@ p {
     margin-right: 30px !important;
 }
 
-.navbar .nav a{
+.navbar-default .navbar-nav>li>a{
     font-family: 'museo_sans_500regular' !important;
-	color: white !important;
+	color: rgb(50,50,50) !important;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+	
 }
+.light .navbar-default .navbar-nav>li>a {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
 .nav>li>a:hover, .nav>li>a:focus, .navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:focus {
+    color: rgb(31, 150,169) !important;
     background-color: inherit !important;
-    
+
+}
+
+.navbar .navbar-nav>.widget>a:hover {
+    background-color: inherit !important;
 }
 
 .navbar-right {
@@ -215,6 +234,25 @@ img.stretch {
 }
 .map-attribution {
     display: none;
+}
+
+.about img {
+    width: 100%;
+}
+.about p {
+    font-size: 16px;
+}
+body {
+    background-color: rgb(230,230,230);
+}
+.about .bug {
+    margin-bottom: 40px;
+    border-bottom: 5px solid white;
+}
+
+.about .bug .dark {
+    color: rgb(0,0,0);
+    font-weight: bold;
 }
 #map {
     position: absolute;
