@@ -15,6 +15,10 @@ iframe {
     background-color: rgb(32,85,57);
 }
 
+html, body {
+    height: 100%;
+}
+
 
 .team {
     margin-bottom: 20px;
@@ -78,8 +82,6 @@ p {
     border: 0px !important;
     position: absolute !important;
 }
-    
-}
 
 .navbar .brand {
     height: 170px;
@@ -137,7 +139,7 @@ p {
 
 .navbar-collapse.collapsing, .navbar-collapse.in {
     background-color: rgba(255,255,255,.7);
-        text-shadow: 0;
+        text-shadow: none;
 }
 
 .navbar-collapse.collapsing a, .navbar-collapse.in a{
@@ -181,6 +183,19 @@ p {
     height: 100%;
     
 }
+.carousel-control i{
+position: absolute;
+top: 50%;
+left: 15px;
+z-index: 5;
+display: inline-block;
+font-size: 72px;
+font-weight: normal;
+}
+.carousel-control.right i{ 
+    right: 15px;
+    left: auto;
+}
 img.stretch {
     width: 100%;
     margin: 0 auto;
@@ -192,7 +207,7 @@ img.stretch {
     color: rgb(31, 150,169);
 }
 .root {
-    height: 650px;
+    height: 85%;
     background-color: white;
 }
 .root .content {

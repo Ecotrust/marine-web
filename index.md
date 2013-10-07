@@ -53,10 +53,10 @@ tagline: ocean tools
       {% endfor %}
     </div>
     <a class="left carousel-control" href="#geocarousel" data-slide="prev">
-      <span class="icon-prev"></span>
+      <i class="icon-chevron-left"> </i>
     </a>
     <a class="right carousel-control" href="#geocarousel" data-slide="next">
-      <span class="icon-next"></span>
+      <i class="icon-chevron-right"> </i>
     </a>
   </div>
 </div>
