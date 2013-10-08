@@ -78,9 +78,18 @@ p {
 }
 
 .navbar-default {
-    background-color: white !important;
+    
     border: 0px !important;
     position: absolute !important;
+}
+
+.container.brand-container, .navbar .container {
+    background-color: white !important;
+}
+
+.brand-container {
+    margin-left: -15px!important;
+    margin-right: -15px !important;
 }
 
 .transparent .navbar-default {
@@ -96,6 +105,8 @@ p {
     height: 170px;
     margin-left: 0 !important;
 }
+
+.
 
 .navbar-default .navbar-toggle {
     margin-top: 30px !important;
@@ -242,12 +253,12 @@ img.stretch {
 .about p {
     font-size: 16px;
 }
-body {
-    background-color: rgb(230,230,230);
+.container {
+    background-color: rgb(230,230,230) !important;
 }
 .about .bug {
     margin-bottom: 40px;
-    border-bottom: 5px solid white;
+    border-bottom: 1px solid white;
 }
 
 .about .bug .dark {
