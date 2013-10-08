@@ -57,7 +57,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-    font-family:Georgia, serif !important;
+    /*font-family:Georgia, serif !important;*/
+    font-size: 16px;
     -ms-word-break: break-all;
          word-break: break-word;
     -webkit-hyphens: auto;
@@ -86,6 +87,23 @@ p {
 .container.brand-container, .navbar .container {
     background-color: white !important;
 }
+
+.main-container {
+    padding-top: 40px;
+}
+
+    .main-container .row {
+        margin-bottom: 40px;
+    }
+    .main-container h3 {
+        margin-bottom: 0;
+    }
+    .main-container p {
+        margin-bottom: 0;
+    }
+    .main-container .dark {
+        margin-bottom: 5px;
+    }
 
 /*.brand-container {
     margin-left: -15px!important;
@@ -228,7 +246,7 @@ font-weight: normal;
 }
 img.stretch {
     width: 100%;
-    margin: 0 auto;
+    
 }
 .thumbnail img {
     width: 100% !important;
@@ -261,7 +279,7 @@ img.stretch {
     border-bottom: 1px solid white;
 }
 
-.about .bug .dark {
+.dark {
     color: rgb(0,0,0);
     font-weight: bold;
 }
