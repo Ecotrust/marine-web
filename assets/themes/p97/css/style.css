@@ -278,9 +278,9 @@ img.stretch {
     background-color: rgb(230,230,230) !important;
 }
 .about .bug {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    padding-top: 10px;
     padding-bottom: 40px;
     border-bottom: 1px solid white;
 }
