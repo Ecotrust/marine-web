@@ -88,6 +88,10 @@ p {
     background-color: white !important;
 }
 
+.navbar-brand img {
+    margin-left: -25px;
+}
+
 .main-container {
     padding-top: 40px;
 }
