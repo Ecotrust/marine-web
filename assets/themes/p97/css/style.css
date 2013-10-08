@@ -118,6 +118,9 @@ p {
     /* ... but also 5, 6, 7 */
     filter: alpha(opacity=0);
 }
+    .transparent .navbar-default .container {
+        background-color: rgba(0,0,0,0) !important;
+    }
 
 .navbar .brand {
     height: 170px;
@@ -303,6 +306,7 @@ img.stretch {
 #carousel-wrapper .carousel, #carousel-wrapper .carousel .carousel-inner, #carousel-wrapper .carousel .item, #carousel-wrapper .carousel .container {
     height: 100%;
     width: 100%;
+    background-color: rgba(0,0,0,0) !important;
 }
     #carousel-wrapper iframe {
         position: absolute;
