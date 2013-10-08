@@ -64,7 +64,7 @@
     var center = {lat: 45.5200, lon:  -122.6819};
     if ($map.length) {
       var map = mapbox.map($map[0], null, null, []);
-      
+      window.map = map;
       
       // Add the layer
       map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
@@ -75,10 +75,11 @@
       } else if ($map.hasClass('short-map')) {
         map.centerzoom(center,3);
         updateWeather(center.lat, center.lon);
-      } else if ($map.length) {
+      } else if ($map.length && ! $map.hasClass('header')) {
         map.centerzoom(center,2);
         map.ease.location({ lat: center.lat, lon: center.lon -1 }).zoom(6).optimal();  
         updateWeather(center.lat, center.lon);
+        
         var markers = mapbox.markers.layer().url('data/places.geojson');
         // markers.factory(function(f) {
         //     var img = document.createElement('img');
@@ -86,10 +87,14 @@
         //     return img;
         // });
         map.addLayer(markers);
-      } else {
+      } 
 
-      }
-      
+      // if ($map.data('lat2') && $map.data('lat2')) {
+      //   setInterval(function () {
+      //     map.ease.location({ lat: $map.data('lat2'), lon: $map.data('lng2') -1 }).zoom(6).optimal();
+      //   }, 1000)
+      // }
+
       // Attribute
       map.ui.attribution.add()
           .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');

@@ -77,7 +77,8 @@
       </div>
     </div>
 
-    
+    {% if page.header %}><div id="map" class="header" data-lat="{{page.lat}}" data-lng="{{page.lng}}" data-lat2="{{page.lat2}}" data-lng2="{{page.lng2}}" data-zoom="{{page.zoom}}" data-zoom="{{page.zoom}}"></div>
+    {% endif %}
     {{ content }}
 
     <div class="container brand-container">
@@ -108,5 +109,6 @@
     <script src="{{ ASSET_PATH }}/lib/js/backstretch.js"></script>
     
     <script src="{{ ASSET_PATH }}/js/main.js"></script>
+    </script>
   </body>
 </html>
