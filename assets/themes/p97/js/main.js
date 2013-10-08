@@ -61,13 +61,13 @@
     //}
 
     var $map = $('#map');
+    var center = {lat: 45.5200, lon:  -122.6819};
     if ($map.length) {
       var map = mapbox.map($map[0], null, null, []);
-      var center = {lat: 45.5200, lon:  -122.6819};
+      
       
       // Add the layer
       map.addLayer(new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/magrish/{Z}/{X}/{Y}.png'));
-
       if ($map.data('lat') && $map.data('lng')) {
         center = {lat: $map.data('lat'), lon: $map.data('lng') };
         map.centerzoom(center,5);
@@ -86,12 +86,16 @@
         //     return img;
         // });
         map.addLayer(markers);
+      } else {
+
       }
       
       // Attribute
       map.ui.attribution.add()
           .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
     
+    } else {
+      updateWeather(center.lat, center.lon);
     }
     
     var $geocarousel = $('#geocarousel');
