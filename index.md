@@ -28,7 +28,13 @@ transparent: true
                     <h2>{{ post.place }}</h2>  
                       <p>{{ post.blurb }}</p>
                       <p>{{ post.image }}</p>
+                      {% if post.link %}
+                      <a href="{{ post.link }}">
+                        READ MORE <i class="icon-arrow-right"> </i>
+                      </a>
+                      {% endif %}
                       <div class="product-icon">
+                      <hr/>
                       {% case post.product %}
                       {% when 'digital-deck' %}
                       <img src="{{ ASSET_PATH }}/images/logos/DigitalDeckLOGO.svg"/>
