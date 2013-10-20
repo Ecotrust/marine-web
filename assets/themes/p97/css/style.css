@@ -142,7 +142,7 @@ p {
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: bold;
-	
+    padding-left: 0;	
 }
 /*.light .navbar-default .navbar-nav>li>a {
     color: white !important;
